@@ -29,10 +29,10 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  patch '/recipes/:id/edit' do
+  patch '/recipes/:id' do
     binding.pry
     current_recipe.update(params)
-    redirect to "/recipes/#{@recipe.id}"
+    redirect to "/recipe/#{@recipe.id}"
   end
 
   post "/recipes" do
