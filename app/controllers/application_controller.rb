@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/recipes/:id' do
-    binding.pry
+    # binding.pry
     current_recipe.update(params)
     redirect to "/recipe/#{@recipe.id}"
   end
